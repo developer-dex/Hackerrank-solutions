@@ -1,0 +1,30 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    
+
+    public static void main(String[] args) throws IOException {
+       Scanner sc = new Scanner(System.in);
+        int p = sc.nextInt();
+        int d = sc.nextInt();
+        int m = sc.nextInt();
+        int s = sc.nextInt();
+        
+       int count = 0;
+        while(s>=p){
+            count++;
+            s -=p;
+            p = Math.max(p-d,m);
+        }
+
+   System.out.println(count);
+      
+    }
+}
